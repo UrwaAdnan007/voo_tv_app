@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:voo_tv_app/app.dart';
+import 'package:voo_tv_app/features/splash.dart';
+import 'package:voo_tv_app/config/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,13 +11,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    final AppRouter _routes = AppRouter();
+    return MaterialApp.router(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const App(),
+      routerConfig: _routes.config(),
     );
   }
 }

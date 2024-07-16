@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:voo_tv_app/features/splash.dart';
+import 'package:voo_tv_app/features/splash1.dart';
 import 'package:voo_tv_app/config/routes/routes.dart';
 
 void main() {

@@ -8,25 +8,32 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i3;
+import 'package:auto_route/auto_route.dart' as _i4;
 import 'package:voo_tv_app/features/auth/login/login_page.dart' as _i1;
-import 'package:voo_tv_app/features/splash.dart' as _i2;
+import 'package:voo_tv_app/features/auth/signup/signup_page.dart' as _i2;
+import 'package:voo_tv_app/features/splash1.dart' as _i3;
 
-abstract class $AppRouter extends _i3.RootStackRouter {
+abstract class $AppRouter extends _i4.RootStackRouter {
   $AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i3.PageFactory> pagesMap = {
+  final Map<String, _i4.PageFactory> pagesMap = {
     LoginRoute.name: (routeData) {
-      return _i3.AutoRoutePage<dynamic>(
+      return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i1.LoginPage(),
       );
     },
-    SplashRoute.name: (routeData) {
-      return _i3.AutoRoutePage<dynamic>(
+    SignupRoute.name: (routeData) {
+      return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.SplashPage(),
+        child: const _i2.SignupPage(),
+      );
+    },
+    SplashRoute.name: (routeData) {
+      return _i4.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i3.SplashPage(),
       );
     },
   };
@@ -34,8 +41,8 @@ abstract class $AppRouter extends _i3.RootStackRouter {
 
 /// generated route for
 /// [_i1.LoginPage]
-class LoginRoute extends _i3.PageRouteInfo<void> {
-  const LoginRoute({List<_i3.PageRouteInfo>? children})
+class LoginRoute extends _i4.PageRouteInfo<void> {
+  const LoginRoute({List<_i4.PageRouteInfo>? children})
       : super(
           LoginRoute.name,
           initialChildren: children,
@@ -43,13 +50,27 @@ class LoginRoute extends _i3.PageRouteInfo<void> {
 
   static const String name = 'LoginRoute';
 
-  static const _i3.PageInfo<void> page = _i3.PageInfo<void>(name);
+  static const _i4.PageInfo<void> page = _i4.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i2.SplashPage]
-class SplashRoute extends _i3.PageRouteInfo<void> {
-  const SplashRoute({List<_i3.PageRouteInfo>? children})
+/// [_i2.SignupPage]
+class SignupRoute extends _i4.PageRouteInfo<void> {
+  const SignupRoute({List<_i4.PageRouteInfo>? children})
+      : super(
+          SignupRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SignupRoute';
+
+  static const _i4.PageInfo<void> page = _i4.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i3.SplashPage]
+class SplashRoute extends _i4.PageRouteInfo<void> {
+  const SplashRoute({List<_i4.PageRouteInfo>? children})
       : super(
           SplashRoute.name,
           initialChildren: children,
@@ -57,5 +78,5 @@ class SplashRoute extends _i3.PageRouteInfo<void> {
 
   static const String name = 'SplashRoute';
 
-  static const _i3.PageInfo<void> page = _i3.PageInfo<void>(name);
+  static const _i4.PageInfo<void> page = _i4.PageInfo<void>(name);
 }

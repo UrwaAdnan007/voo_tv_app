@@ -16,7 +16,7 @@ class SplashPage extends StatelessWidget {
             Text('Splash Page'),
             IconButton(
                 onPressed: () {
-                  context.pushRoute(const LoginRoute());
+                  context.pushRoute(const SplashRoute());
                 },
                 icon: const Icon(Icons.forward))
           ],

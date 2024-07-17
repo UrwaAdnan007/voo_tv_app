@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:voo_tv_app/features/splash1.dart';
 import 'package:voo_tv_app/config/routes/routes.dart';
 
 void main() {
@@ -18,6 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      debugShowCheckedModeBanner: false,
       routerConfig: _routes.config(),
     );
   }

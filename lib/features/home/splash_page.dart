@@ -1,0 +1,55 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:voo_tv_app/config/theme/app_colors.dart';
+
+@RoutePage()
+class SplashPage extends StatelessWidget {
+  const SplashPage({super.key});
+  final String backgroundImg = 'assets/images/bg_img.png';
+  final String logo = 'assets/images/logo.svg';
+  final String text =
+      '...striving towards the rebirth of Apostolic Christianity';
+
+  @override
+  Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+    return Container(
+      decoration: BoxDecoration(
+          color: AppColor.bgColor,
+          image: DecorationImage(
+            image: AssetImage(backgroundImg),
+            fit: BoxFit.fill,
+          )),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                color: Colors.amber,
+                child: SvgPicture.asset(
+                  logo,
+                  height: height * 0.15,
+                ),
+              ),
+              Text(
+                text,
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                  color: AppColor.txtColor,
+                  fontSize: 10,
+                  fontWeight: FontWeight.w400,
+                  height: 14.4,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

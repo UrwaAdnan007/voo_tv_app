@@ -33,7 +33,6 @@ class SplashPage extends StatelessWidget {
                 color: Colors.amber,
                 child: SvgPicture.asset(
                   logo,
-                  height: height * 0.15,
                 ),
               ),
               Text(

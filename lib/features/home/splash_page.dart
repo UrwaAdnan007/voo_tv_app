@@ -2,13 +2,33 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:voo_tv_app/config/routes/routes.gr.dart';
 import 'package:voo_tv_app/config/theme/app_colors.dart';
 
 @RoutePage()
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
+
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(
+      const Duration(seconds: 4),
+      () {
+        context.pushRoute(const SplashSecondRoute());
+      },
+    );
+  }
+
   final String backgroundImg = 'assets/images/bg_img.png';
+
   final String logo = 'assets/images/logo.svg';
+
   final String text =
       '...striving towards the rebirth of Apostolic Christianity';
 
@@ -29,11 +49,8 @@ class SplashPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                color: Colors.amber,
-                child: SvgPicture.asset(
-                  logo,
-                ),
+              SvgPicture.asset(
+                logo,
               ),
               Text(
                 text,

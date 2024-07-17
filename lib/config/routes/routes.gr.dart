@@ -13,8 +13,8 @@ import 'package:voo_tv_app/features/auth/forgetPassword/forget_password_page.dar
     as _i1;
 import 'package:voo_tv_app/features/auth/login/login_page.dart' as _i2;
 import 'package:voo_tv_app/features/auth/signup/signup_page.dart' as _i3;
-import 'package:voo_tv_app/features/home/splash2.dart' as _i5;
-import 'package:voo_tv_app/features/home/splash1.dart' as _i4;
+import 'package:voo_tv_app/features/home/splash_second_page.dart' as _i5;
+import 'package:voo_tv_app/features/home/splash_page.dart' as _i4;
 
 abstract class $AppRouter extends _i6.RootStackRouter {
   $AppRouter({super.navigatorKey});

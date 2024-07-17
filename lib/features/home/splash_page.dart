@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:voo_tv_app/config/routes/routes.gr.dart';
-import 'package:voo_tv_app/config/theme/app_colors.dart';
+import 'package:voo_tv_app/core/constants/app_colors.dart';
 
 @RoutePage()
 class SplashPage extends StatefulWidget {

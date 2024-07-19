@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:voo_tv_app/config/routes/routes.gr.dart';
 import 'package:voo_tv_app/core/constants/app_colors.dart';
-import 'package:voo_tv_app/core/utils/custom_btn.dart';
+import 'package:voo_tv_app/core/widgets/app_button.dart';
 
 @RoutePage()
 class SplashSecondPage extends StatelessWidget {
@@ -18,91 +18,69 @@ class SplashSecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    return Container(
-      decoration: BoxDecoration(
-          color: AppColor.bgColor,
-          image: DecorationImage(
-            image: AssetImage(bgImg),
-            fit: BoxFit.fill,
-          )),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: Stack(
-          children: [
-            Positioned(
-              bottom: 0,
+    return Scaffold(
+      // backgroundColor: Colors.transparent,
+      body: Stack(
+        alignment: Alignment.bottomCenter,
+        // fit: StackFit.expand,
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              bgImg,
+              fit: BoxFit.fill,
+            ),
+          ),
+          // Positioned(
+          //   bottom: 0,
+          //   child: Center(
+          //     child: SvgPicture.asset(
+          //       blurBG,
+          //       fit: BoxFit.fill,
+          //       width: width,
+          //       height: height * 0.3,
+          //     ),
+          //   ),
+          // ),
+          Positioned(
+            bottom: 0,
+            child: Container(
+              height: height * 0.3,
+              width: width,
               child: SvgPicture.asset(
                 blurBG,
-                width: width,
+                fit: BoxFit.cover,
               ),
             ),
-            Positioned(
-              bottom: 0,
-              child: Container(
-                width: width,
-                height: height * 0.3,
-                color: Colors.transparent,
+          ),
+          Positioned(
+            bottom: 0,
+            child: Container(
+              alignment: Alignment.center,
+              width: width,
+              height: height * 0.3,
+              color: Colors.transparent,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const SizedBox(),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: width * 0.04),
-                      child: SizedBox(
-                        height: height * 0.07,
-                        child: CustomButton(
-                            height: height,
-                            width: double.infinity,
-                            onTap: () {
-                              context.pushRoute(const SignupRoute());
-                            },
-                            color: AppColor.btnColor,
-                            child: Center(
-                              child: Text(
-                                signuptext,
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.poppins(
-                                  color: AppColor.whiteColor,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                  // height: 19.2,
-                                ),
-                              ),
-                            )),
-                      ),
+                    AppButton(
+                      title: signuptext,
+                      onTap: () {},
                     ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: width * 0.04),
-                      child: SizedBox(
-                        height: height * 0.07,
-                        child: CustomButton(
-                            height: height,
-                            width: double.infinity,
-                            onTap: () {
-                              context.pushRoute(const LoginRoute());
-                            },
-                            color: AppColor.whiteColor,
-                            child: Center(
-                              child: Text(
-                                logintext,
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.poppins(
-                                  color: AppColor.btnColor,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                  // height: 19.2,
-                                ),
-                              ),
-                            )),
-                      ),
+                    AppButton(
+                      widthx: 200,
+                      heightx: 50,
+                      title: logintext,
+                      onTap: () {},
+                      color: AppColor.whiteColor,
                     ),
-                    const SizedBox(),
                   ],
                 ),
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }

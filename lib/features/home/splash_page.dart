@@ -38,7 +38,7 @@ class _SplashPageState extends State<SplashPage> {
     double height = MediaQuery.of(context).size.height;
     return Container(
       decoration: BoxDecoration(
-          color: AppColor.bgColor,
+          color: AppColors.backgroundColor,
           image: DecorationImage(
             image: AssetImage(backgroundImg),
             fit: BoxFit.fill,
@@ -56,7 +56,7 @@ class _SplashPageState extends State<SplashPage> {
                 text,
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
-                  color: AppColor.txtColor,
+                  color: AppColors.textColor,
                   fontSize: 10,
                   fontWeight: FontWeight.w400,
                   height: 14.4,

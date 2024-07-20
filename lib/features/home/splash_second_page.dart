@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:voo_tv_app/config/routes/routes.gr.dart';
 import 'package:voo_tv_app/core/constants/app_colors.dart';
 import 'package:voo_tv_app/core/widgets/app_button.dart';
@@ -30,17 +29,6 @@ class SplashSecondPage extends StatelessWidget {
               fit: BoxFit.fill,
             ),
           ),
-          // Positioned(
-          //   bottom: 0,
-          //   child: Center(
-          //     child: SvgPicture.asset(
-          //       blurBG,
-          //       fit: BoxFit.fill,
-          //       width: width,
-          //       height: height * 0.3,
-          //     ),
-          //   ),
-          // ),
           Positioned(
             bottom: 0,
             child: Container(
@@ -66,14 +54,16 @@ class SplashSecondPage extends StatelessWidget {
                   children: [
                     AppButton(
                       title: signuptext,
-                      onTap: () {},
+                      onTap: () {
+                        context.pushRoute(const SignupRoute());
+                      },
                     ),
                     AppButton(
-                      widthx: 200,
-                      heightx: 50,
                       title: logintext,
-                      onTap: () {},
-                      color: AppColor.whiteColor,
+                      onTap: () {
+                        context.pushRoute(const LoginRoute());
+                      },
+                      color: AppColors.whiteColor,
                     ),
                   ],
                 ),
@@ -85,20 +75,3 @@ class SplashSecondPage extends StatelessWidget {
     );
   }
 }
-//  CustomButton(
-//                         height: 200,
-//                         width: double.infinity,
-//                         onTap: () {
-//                           context.pushRoute(const SignupRoute());
-//                         },
-//                         color: AppColor.btnColor,
-//                         child: Text(
-//                           text,
-//                           textAlign: TextAlign.center,
-//                           style: GoogleFonts.poppins(
-//                             color: AppColor.whiteColor,
-//                             fontSize: 16,
-//                             fontWeight: FontWeight.w600,
-//                             height: 19.2,
-//                           ),
-//                         )),

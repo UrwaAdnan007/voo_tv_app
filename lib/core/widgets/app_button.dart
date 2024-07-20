@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:voo_tv_app/core/constants/app_colors.dart';
@@ -26,7 +25,7 @@ class AppButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onTap,
       style: ButtonStyle(
-        backgroundColor: WidgetStatePropertyAll(color ?? AppColor.btnColor),
+        backgroundColor: WidgetStatePropertyAll(color ?? AppColors.buttonColor),
         fixedSize: WidgetStatePropertyAll(
             Size(widthx ?? buttonWidth, heightx ?? buttonHeight * 0.07)),
         minimumSize: WidgetStatePropertyAll(
@@ -43,7 +42,7 @@ class AppButton extends StatelessWidget {
         overflow: TextOverflow.ellipsis,
         textAlign: TextAlign.center,
         style: GoogleFonts.poppins(
-          color: color == null ? AppColor.whiteColor : AppColor.btnColor,
+          color: color == null ? AppColors.whiteColor : AppColors.buttonColor,
           fontSize: 16.0,
           fontWeight: FontWeight.w600,
           // height: 19.2,

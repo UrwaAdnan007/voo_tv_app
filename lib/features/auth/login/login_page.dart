@@ -24,67 +24,69 @@ class LoginPage extends StatelessWidget {
   final String forgetpassword = 'Forget Password?';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Expanded(
-              flex: 4,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  AppTitle(text: maintitle),
-                  AppTextField(
-                    title: emailaddress,
-                    hinttext: emailtextfield,
-                  ),
-                  PasswordTextField(
-                    title: password,
-                    hinttext: enterpassword,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      context.pushRoute(const ForgetPasswordRoute());
-                    },
-                    child: Text(
-                      forgetpassword,
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.poppins(
-                        color: AppColors.forgetpasswordColor,
-                        fontSize: 12.0,
-                        height: 2,
-                        fontWeight: FontWeight.w400,
-                      ),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: AppColors.backgroundColor,
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Expanded(
+                flex: 4,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    AppTitle(text: maintitle),
+                    AppTextField(
+                      title: emailaddress,
+                      hinttext: emailtextfield,
                     ),
-                  )
-                ],
+                    PasswordTextField(
+                      title: password,
+                      hinttext: enterpassword,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        context.pushRoute(const ForgetPasswordRoute());
+                      },
+                      child: Text(
+                        forgetpassword,
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.poppins(
+                          color: AppColors.forgetpasswordColor,
+                          fontSize: 12.0,
+                          height: 2,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Expanded(
-              flex: 6,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  AppButton(
-                    title: logintext,
-                    onTap: () {},
-                  ),
-                  CreateAccountText(
-                    title: title,
-                    text: text,
-                    onTap: () {
-                      context.pushRoute(const SignupRoute());
-                    },
-                  ),
-                ],
-              ),
-            )
-          ],
+              Expanded(
+                flex: 6,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    AppButton(
+                      title: logintext,
+                      onTap: () {},
+                    ),
+                    CreateAccountText(
+                      title: title,
+                      text: text,
+                      onTap: () {
+                        context.pushRoute(const SignupRoute());
+                      },
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

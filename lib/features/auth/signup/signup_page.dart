@@ -84,7 +84,9 @@ class SignupPage extends StatelessWidget {
                   children: [
                     AppButton(
                       title: signuptext,
-                      onTap: () {},
+                      onTap: () {
+                        context.pushRoute(const MainRoute());
+                      },
                     ),
                     CreateAccountText(
                       title: title,

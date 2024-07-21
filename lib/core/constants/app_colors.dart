@@ -13,4 +13,7 @@ class AppColors {
   static const Color smalltextColor = Color(0xff727272);
   static const Color checkboxfilledColor = Color(0xffC4C4C4);
   static const Color forgetpasswordColor = Color(0xff163271);
+  static const Color tabsIconColor = Color(0xff424242);
+  static const Color tabsSelectedColor = Color(0xffEC2227);
+  static const Color cancelIconColor = Color(0xffD8D8D8);
 }

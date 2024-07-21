@@ -35,7 +35,6 @@ class _AppCheckboxState extends State<AppCheckbox> {
           style: GoogleFonts.poppins(
             color: AppColors.smalltextColor,
             fontSize: 10.0,
-            height: 1,
             fontWeight: FontWeight.w400,
           ),
         )

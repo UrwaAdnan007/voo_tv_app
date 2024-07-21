@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:voo_tv_app/config/routes/routes.gr.dart';
 import 'package:voo_tv_app/core/constants/app_colors.dart';
 import 'package:voo_tv_app/core/widgets/app_button.dart';
 import 'package:voo_tv_app/core/widgets/app_textfield.dart';

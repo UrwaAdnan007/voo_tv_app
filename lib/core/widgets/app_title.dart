@@ -3,8 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:voo_tv_app/core/constants/app_colors.dart';
 
 class AppTitle extends StatelessWidget {
-  const AppTitle({super.key, required this.text});
+  const AppTitle({
+    super.key,
+    required this.text,
+  });
   final String text;
+
   @override
   Widget build(BuildContext context) {
     return Text(

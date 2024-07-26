@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:voo_tv_app/config/model/audio_listview_builder.dart';
 import 'package:voo_tv_app/config/model/video_listview_builder.dart';
+import 'package:voo_tv_app/core/constants/app_colors.dart';
 import 'package:voo_tv_app/core/widgets/app_search_bar.dart';
 import 'package:voo_tv_app/core/widgets/app_title.dart';
 import 'package:voo_tv_app/core/widgets/view_all_button.dart';
@@ -17,6 +18,7 @@ class HomePage extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(

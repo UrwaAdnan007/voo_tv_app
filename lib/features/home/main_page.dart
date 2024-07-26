@@ -24,6 +24,7 @@ class MainPage extends StatelessWidget {
         return Scaffold(
           body: child,
           bottomNavigationBar: BottomNavigationBar(
+            backgroundColor: AppColors.backgroundColor,
             currentIndex: TabsRouter.activeIndex,
             onTap: (value) {
               TabsRouter.setActiveIndex(value);
@@ -81,7 +82,6 @@ class MainPage extends StatelessWidget {
             ),
             iconSize: 40,
             selectedItemColor: AppColors.tabsSelectedColor,
-            backgroundColor: AppColors.whiteColor,
             unselectedItemColor: AppColors.tabsIconColor,
             showUnselectedLabels: true,
             unselectedFontSize: 8,

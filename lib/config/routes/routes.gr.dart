@@ -19,7 +19,7 @@ import 'package:voo_tv_app/features/home/bottom_navigation_pages.dart/notificati
     as _i6;
 import 'package:voo_tv_app/features/home/bottom_navigation_pages.dart/prayer_request_page.dart'
     as _i7;
-import 'package:voo_tv_app/features/home/bottom_navigation_pages.dart/videos_page.dart'
+import 'package:voo_tv_app/features/home/bottom_navigation_pages.dart/video_page/videos_page.dart'
     as _i11;
 import 'package:voo_tv_app/features/auth/login/login_page.dart' as _i4;
 import 'package:voo_tv_app/features/auth/signup/signup_page.dart' as _i8;

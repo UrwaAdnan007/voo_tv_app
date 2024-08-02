@@ -6,12 +6,14 @@ class AppTextField extends StatelessWidget {
   const AppTextField({
     super.key,
     this.childsuffix,
+    this.textsuffix,
     this.maxlines,
     required this.hinttext,
     required this.title,
   });
   final String hinttext;
   final Widget? childsuffix;
+  final String? textsuffix;
   final int? maxlines;
   final String title;
 
@@ -45,6 +47,12 @@ class AppTextField extends StatelessWidget {
             ),
             filled: true,
             fillColor: AppColors.textFieldColor,
+            suffixText: textsuffix,
+            suffixStyle: GoogleFonts.poppins(
+              color: AppColors.textFieldTextColor,
+              fontSize: 14.0,
+              fontWeight: FontWeight.w400,
+            ),
             suffix: childsuffix,
             border: OutlineInputBorder(
                 borderSide: BorderSide.none,

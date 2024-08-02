@@ -29,11 +29,14 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   auto_route: ^8.1.4
+  chip_list: ^3.1.0
   cupertino_icons: ^1.0.6
+  
   expandable: ^5.0.1
   flutter:
     sdk: flutter
   flutter_neat_and_clean_calendar: ^0.3.19+41
+  
   flutter_svg: ^2.0.10
   google_fonts: ^6.2.1
 

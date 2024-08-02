@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:voo_tv_app/config/model/audio_listview_builder.dart';
-import 'package:voo_tv_app/config/model/video_listview_builder.dart';
+import 'package:voo_tv_app/features/home/bottom_navigation_pages.dart/audios/audio_listview_builder.dart';
+import 'package:voo_tv_app/features/home/bottom_navigation_pages.dart/video_page/video_listview_builder.dart';
 import 'package:voo_tv_app/core/constants/app_colors.dart';
 import 'package:voo_tv_app/core/widgets/app_search_bar.dart';
 import 'package:voo_tv_app/core/widgets/app_title.dart';

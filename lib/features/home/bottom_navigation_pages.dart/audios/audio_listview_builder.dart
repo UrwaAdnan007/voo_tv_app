@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voo_tv_app/config/model/audio_model.dart';
-import 'package:voo_tv_app/core/widgets/audio_list_tile.dart';
+import 'package:voo_tv_app/features/home/bottom_navigation_pages.dart/audios/audio_list_tile.dart';
 
 class AudioListViewBuilder extends StatelessWidget {
   AudioListViewBuilder({super.key});

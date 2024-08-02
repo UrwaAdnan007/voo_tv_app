@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:voo_tv_app/core/constants/app_colors.dart';
 
@@ -12,6 +11,8 @@ class MessageTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      minLines: 1,
+      maxLines: 10,
       style: GoogleFonts.poppins(
         color: AppColors.textFieldTextColor,
         fontSize: 16.0,

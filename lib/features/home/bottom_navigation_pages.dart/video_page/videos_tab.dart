@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:voo_tv_app/config/model/video_listview_builder.dart';
+import 'package:voo_tv_app/features/home/bottom_navigation_pages.dart/video_page/video_listview_builder.dart';
 import 'package:voo_tv_app/core/widgets/app_search_bar.dart';
 
 class VideosTab extends StatelessWidget {

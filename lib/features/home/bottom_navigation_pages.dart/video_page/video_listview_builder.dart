@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voo_tv_app/config/model/video_model.dart';
-import 'package:voo_tv_app/core/widgets/video_list_tile.dart';
+import 'package:voo_tv_app/features/home/bottom_navigation_pages.dart/video_page/video_list_tile.dart';
 
 class VideoListViewBuilder extends StatelessWidget {
   VideoListViewBuilder({super.key});
@@ -16,7 +16,7 @@ class VideoListViewBuilder extends StatelessWidget {
         title: 'To Him That Overcometh',
         image: 'assets/video_items/item_two.png',
         duraton: '1:01:15',
-        newTag: 'new',
+        newTag: 'New',
         name: 'Apst. Arome Osayi'),
     VideoModel(
         title: 'To Him That Overcometh',
@@ -27,7 +27,7 @@ class VideoListViewBuilder extends StatelessWidget {
     VideoModel(
         title: 'Apostolic Empowerment Confere..',
         duraton: '1:01:15',
-        newTag: 'new',
+        newTag: 'New',
         image: 'assets/video_items/item_four.png',
         name: 'Apst. Arome Osayi'),
     VideoModel(

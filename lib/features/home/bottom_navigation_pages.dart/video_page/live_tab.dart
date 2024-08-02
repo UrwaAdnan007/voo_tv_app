@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:voo_tv_app/core/constants/app_colors.dart';
 import 'package:voo_tv_app/core/widgets/message_textfield.dart';
-import 'package:voo_tv_app/features/home/bottom_navigation_pages.dart/video_page/comments.dart';
+import 'package:voo_tv_app/features/home/bottom_navigation_pages.dart/video_page/comments_listview_builder.dart';
 
 class LiveTab extends StatelessWidget {
   const LiveTab({super.key});
@@ -34,7 +34,7 @@ class LiveTab extends StatelessWidget {
               ),
             ),
           ),
-          Container(
+          SizedBox(
             width: width,
             height: height * 0.3,
             child: Image.asset(
@@ -68,14 +68,20 @@ class LiveTab extends StatelessWidget {
                 ),
               ),
               collapsed: const Text(''),
-              expanded: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              expanded: Stack(
                 children: <Widget>[
-                  for (var _ in Iterable.generate(10))
-                    const Padding(
-                        padding: EdgeInsets.only(bottom: 10),
-                        child: Comments()),
-                  const MessageTextField(hinttext: 'Message')
+                  SizedBox(
+                      width: width,
+                      height: height,
+                      child: CommentsListviewBuilder()),
+                  Positioned(
+                    bottom: 0,
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                          bottom: MediaQuery.of(context).viewInsets.bottom),
+                      child: const MessageTextField(hinttext: 'Message'),
+                    ),
+                  )
                 ],
               ),
               builder: (_, collapsed, expanded) {
@@ -96,3 +102,4 @@ class LiveTab extends StatelessWidget {
     );
   }
 }
+// for (var _ in Iterable.generate(10))
